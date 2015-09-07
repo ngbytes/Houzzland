@@ -2,6 +2,10 @@
  * @copyright	Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
+.shortcode-video{
+	padding-left: 10px;
+	float: left;
+}
 .team199 .team-sett199 {
 	margin:5px; color: #222; background-color: #fff;}
  .team199 .team-sett199:hover {color: #fafafa;

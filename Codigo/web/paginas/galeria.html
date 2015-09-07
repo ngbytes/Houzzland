@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="../css/font-awesome.css" type="text/css">
   <style type="text/css">
 #wrapper, #bottomspot, .mx-base {max-width: 1200px;margin: 0 auto}
-body{font-size:13px;} h1{font-size:44px;} h2{font-size:33px;} h3{font-size:24px;} #mx-leftcol {width: 25%} #mx-rightcol { width: 27%} #mx-maincol {width:73%}
+body{font-size:13px;} h1{font-size:44px;} h2{font-size:33px;} h3{font-size:24px;} #mx-leftcol {width: 25%} #mx-rightcol { width: 27%} #mx-maincol {width:90%}
 #inner_content {width: 100%;} #mx-sideleft {width: 20%}#mx-sideright { width: 30%}
 #nebox201 .newsbox_item { width:33.3%;} #nebox201 .newsbox_sett201 { margin-right:5px;margin-bottom:5px; background-color:#fff;} #nebox201 .newsbox_sett201{box-shadow:0 0 5px rgba(0,0,0,0.1);}
 #nebox201 .newsbox_social a, #nebox201 .newsbox_sep {background-color:#7095b5;} #nebox201 .newsbox_social a:hover {color:#7095b5;}
@@ -100,6 +100,9 @@ jQuery(window).on('load',  function() {
 <script type="text/javascript" charset="UTF-8" src="../js/onion.js"></script>
 <script type="text/javascript" charset="UTF-8" src="../js/stats.js"></script>
 <script type="text/javascript" charset="UTF-8" src="../js/controls.js"></script></head>
+<script type="text/javascript" src="../js/jquery.isotope.min.js"></script>
+<style type="text/css"></style><script type="text/javascript" src="../js/noconflict.js"></script><link rel="stylesheet" href="../css/gallery.css">
+
 <body class="bg ltr blue clearfix">
 
 <!--Start Top-->
@@ -141,22 +144,22 @@ jQuery(window).on('load',  function() {
 
 <div id="hormenu" class="clearfix"><ul class="mx-menu level-0">
   <li class="menu-item  first">
-  <a href="portada.html" class="menu-item active first">
+  <a href="portada.html" class="menu-item  first">
     <span class="menu"><span class="menu-title">Inicio</span></span>
   </a>
 </li>
   <li class="menu-item ">
   <a href="quienes-somos.html" class="menu-item parent"><span class="menu"><span class="menu-title">Quienes Somos</span></span></a>
 </li>
-  <li class="menu-item  active">
+  <li class="menu-item  ">
     <a href="contactenos.html" class="menu-item parent"><span class="menu"><span class="menu-title">Contáctenos</span></span></a>
   </li>
   <li class="menu-item ">
     <a href="testimonios.html" class="menu-item parent"><span class="menu"><span class="menu-title">Testimonios </span></span></a>
   </li>
-  <li class="menu-item">
-    <a href="galeria.html" class="menu-item parent"><span class="menu"><span class="menu-title">Galería de Imágenes </span></span></a>
-  </li>
+    <li class="menu-item active">
+        <a href="galeria.html" class="menu-item parent"><span class="menu"><span class="menu-title">Galería de Imágenes </span></span></a>
+    </li>
    </ul></div><script type="text/javascript">
 //<![CDATA[
 window.addEvent('domready',function(){
@@ -166,7 +169,34 @@ new MXMenu(items_v, { direction: 'LTR', bound: limits, fxOptions: { transition: 
 new MXMenu(items_h, { direction: 'LTR', bound: limits, fxOptions: { transition: Fx.Transitions.linear, duration: 300}, animation: 'slidefade', mode: 'horizontal', offset: {x: -10, y: 5} });
 });
 //]]>
-</script><div class="clearfix"></div>
+
+</script>				<script type="text/javascript">
+    window.addEvent('load', function(){
+        tcnoConflict(function($){
+            $gallery = $('.gallery');
+            $gallery.isotope({
+                // options
+                itemSelector : 'li',
+                layoutMode : 'fitRows'
+            });
+
+            $filter = $('.gallery-filters');
+            $selectors = $filter.find('>a');
+
+            $filter.find('>a').click(function(){
+                var selector = $(this).attr('data-filter');
+
+                $selectors.removeClass('active');
+                $(this).addClass('active');
+
+                $gallery.isotope({ filter: selector });
+                return false;
+            });
+        });
+    });
+</script>
+
+    <div class="clearfix"></div>
 </div>
 </div>
 <div id="wrapper">
@@ -185,18 +215,228 @@ new MXMenu(items_h, { direction: 'LTR', bound: limits, fxOptions: { transition: 
 <div id="mx-maincol" class="clearfix">
 <div id="mx-header1ec" class="clearfix"><div class="mx-inner clearfix">
 
-
 <!-- End icons code -->
 
 </div></div><div class="clr"></div>
 <div id="inner_content" class="clearfix"> <!--Component Area-->
-<div id="mx-advert-grid-top" class="mx-modCol2 clearfix"><div class="mx-inner clearfix"><div style="width:50%" class="mx-block  separator"><div id="mx-advert1ec" class="mod-block mx-advert1ec  first"><div class="module ">
-<div class="mod-wrapper clearfix">
-<div class="mod-content clearfix">
+<div id="mx-advert-grid-top" class="mx-modCol2 clearfix"><div class="mx-inner clearfix"><div style="width:100%" class="mx-block  separator"><div id="mx-advert1ec" class="mod-block mx-advert1ec  first"><div class="module ">
+    <article class="item-page">
 
 
-</div>
-</div>
+
+
+
+
+
+        <header>
+
+
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="gallery-filters btn-group" style="margin-left:10px ">
+            <a data-filter="*" class="btn">Mostrar todo</a>
+
+            <a data-filter=".Terapia" class="btn active">Terapias</a>
+
+            <a data-filter=".Rehabilitacion" class="btn">Rehabilitacion</a>
+
+            <a data-filter=".Video" class="btn">Videos</a>
+        </div>
+
+        <ul style="position: relative; overflow: hidden; height: 242px;" class="gallery isotope">
+
+            <li class="Terapia isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-0" data-toggle="modal" class="img-polaroid">
+                    <img src="1.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-0">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="1.jpg">					</div>
+            </div>
+
+
+            <li class="Terapia isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-1" data-toggle="modal" class="img-polaroid">
+                    <img src="2.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-1">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="2.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(590px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-2" data-toggle="modal" class="img-polaroid">
+                    <img src="3.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-2">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="3.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(295px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-3" data-toggle="modal" class="img-polaroid">
+                    <img src="4.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-3">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="4.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(590px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-4" data-toggle="modal" class="img-polaroid">
+                    <img src="5.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-4">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="5.jpg">					</div>
+            </div>
+
+
+            <li class="Terapia isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-5" data-toggle="modal" class="img-polaroid">
+                    <img src="6.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-5">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="6.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item isotope-hidden" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(295px, 0px) scale(0.001); opacity: 0;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-6" data-toggle="modal" class="img-polaroid">
+                    <img src="7.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-6">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="7.jpg">					</div>
+            </div>
+
+
+            <li class="Terapia isotope-item" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px) scale(1); opacity: 1;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-7" data-toggle="modal" class="img-polaroid">
+                    <img src="8.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-7">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="8.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(164px, 0px) scale(1); opacity: 1;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-8" data-toggle="modal" class="img-polaroid">
+                    <img src="9.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-8">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="9.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(328px, 0px) scale(1); opacity: 1;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-9" data-toggle="modal" class="img-polaroid">
+                    <img src="10.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-9">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="10.jpg">					</div>
+            </div>
+
+
+            <li class="Rehabilitacion isotope-item" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(492px, 0px) scale(1); opacity: 1;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-10" data-toggle="modal" class="img-polaroid">
+                    <img src="11.jpg" alt=" ">											</a>
+            </li>
+
+            <div tabindex="-1" class="modal hide fade" id="modal-10">
+                <a aria-hidden="true" data-dismiss="modal" href="javascript:;" class="close-modal"><i class="icon-remove"></i></a>
+                <div class="modal-body">
+                    <img width="100%" style="max-height:400px" alt=" " src="11.jpg">					</div>
+            </div>
+            <li class="Rehabilitacion isotope-item" style="width: 23%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 121px) scale(1); opacity: 1;">
+                <a href="http://demo7.olwebdesign.com/index.php/shortcodes/gallery/four-column-gallery#modal-11" data-toggle="modal" class="img-polaroid">
+                    <img src="12.jpg" alt=" ">											</a>
+            </li>
+
+            <li class="Video isotope-item" style="width: 46%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 121px) scale(1); opacity: 1;">
+                <iframe class="img-polaroid" src="https://www.youtube.com/embed/cCV8n_HyotQ" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+        </li>
+
+            <li class="Video isotope-item" style="width: 46%; position: absolute; left: 0px; top: 0px; transform: translate(0px, 121px) scale(1); opacity: 1;">
+                <iframe class="img-polaroid" src="https://www.youtube.com/embed/cCV8n_HyotQ" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </article>
+
 </div>
 <div style="clear:both;"></div>
 </div></div><div style="width:50%" class="mx-block "><div id="mx-advert2ec" class="mod-block mx-advert2ec  last"><div class="module ">
@@ -224,130 +464,6 @@ new MXMenu(items_h, { direction: 'LTR', bound: limits, fxOptions: { transition: 
 </div>
 </div>
 <div class="clr"></div>
-</div><div id="mx-rightcol">
-<div id="mx-rightec" class="clearfix"><div class="mx-inner clearfix"><div class="module ">
-<div class="mod-wrapper clearfix">
-<div class="mod-content clearfix">
-<div id="nebox202">
-
-<div id="owl-newsbox" class="nsbox owl-carousel owl-theme owl-loaded owl-responsive-1200">
-
-
-
-
-
-<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2128px, 0px, 0px); transition: 1s; width: 2736px;"><div class="owl-item cloned" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news4.jpg">
-</div>
-<h2>Nunc velolli</h2>
-<p>Sadis elitr mattis interdum seia</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item cloned" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news6.jpg">
-</div>
-<h2>Magna aipsci</h2>
-<p>Anime con saed elitr sce tellus</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news1.jpg">
-</div>
-<h2>Viverra atmpor</h2>
-<p>Nihil anim keffiyeh magnaac</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news2.jpg">
-</div>
-<h2>Dapibu elitsed</h2>
-<p>Fusce dapibus, tellus ac cursus</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news3.jpg">
-</div>
-<h2>Eirod temor</h2>
-<p>Vivamus porta diam nonumy eirm</p>
- <div class="tc-link-group">
-<a href="saved_resource(1).html" target="_blank" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news4.jpg">
-</div>
-<h2>Nunc velolli</h2>
-<p>Sadis elitr mattis interdum seia</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news6.jpg">
-</div>
-<h2>Magna aipsci</h2>
-<p>Anime con saed elitr sce tellus</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item cloned active" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news1.jpg">
-</div>
-<h2>Viverra atmpor</h2>
-<p>Nihil anim keffiyeh magnaac</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div><div class="owl-item cloned" style="width: 304px; margin-right: 0px;"><div class="tc-classes"><div class="tc-inner">
-<div class="figure">
-<img src="news2.jpg">
-</div>
-<h2>Dapibu elitsed</h2>
-<p>Fusce dapibus, tellus ac cursus</p>
- <div class="tc-link-group">
-<a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">read more</a>
-</div>
-</div></div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
-</div>
-
-<!-- End Flex Slider code -->
-
-</div>
-</div>
-</div>
-<div style="clear:both;"></div>
-<div class="module ">
-<div class="mod-wrapper clearfix">
-<h3 class="header">
-Testimonios</h3>
-<div class="mod-content clearfix">
-
-
-<div class="custom">
-  <blockquote class="testimonial">En Avanzare me devolvieron la esperanza
-    <br>Llegue con mi bebe con una deficiencia fisico motora muy grande, gracias al tratamiento y las consejos que me dieron en Avanzare, hoy mi niño puede comer solo.</blockquote>
-  <div class="bq-author">
-    <h6>Juan Villarralda</h6>
-  </div></div>	<blockquote class="testimonial">En Avanzare me devolvieron la esperanza
-  <br>Llegue con mi bebe con una deficiencia fisico motora muy grande, gracias al tratamiento y las consejos que me dieron en Avanzare, hoy mi niño puede comer solo.</blockquote>
-  <div class="bq-author">
-    <h6>Blanca Rodriguez</h6>
-  </div></div>
-  <div class="">
-    <a href="http://demo7.olwebdesign.com/#" target="_self" data-placement="bottom" data-toggle="tooltip" title="read more">Más Testimonios</a>
-  </div>
-</div>
-</div>
 </div>
 <div style="clear:both;"></div>
 </div></div></div>
