@@ -1,0 +1,97 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on Sboost Framework   
+# ---------------------------------------------------------------
+# Author - olwebdesign http://www.olwebdesign.com
+# Copyright (C) 2008 - 2015 olwebdesign.com. All Rights Reserved.
+# Websites: http://www.olwebdesign.com
+-----------------------------------------------------------------*/
+#hormenu,#sublevel {position:relative; z-index: 1000; float: right; margin-top: 5px; margin-right: 10px;}
+#hormenu ul.mx-menu { padding: 0;margin:0}
+#sublevel ul.mx-menu { padding: 5px 0}
+#hormenu .megacol,#sublevel .megacol {float:left}
+#sublevel ul.empty,#sublevel li.empty {height:0px!important;display:none} 
+#hormenu ul li,#sublevel ul li{background:none;padding:0;margin:0} 
+
+/*Top Level*/
+#sublevel {background:#333; color: #ccc;}
+
+#hormenu ul.level-0,
+#sublevel ul.level-1{float:none;display:inline-block;margin:0px;padding:0}
+
+/*Parent list item*/
+#hormenu ul.level-0 > li.menu-item,
+#sublevel ul.level-1 > li.menu-item{background:none;display:inline-block;margin:0 1px 0 0;padding:0}
+
+/*Parent anchor text*/
+
+#hormenu ul.level-0 > li.menu-item > a.menu-item{ color: #222; text-transform:uppercase;display:block;font-size:14px;line-height:normal;text-decoration:none;margin:0;padding:4px 13px; border: 3px solid transparent; background-position:  0px 0px; background-repeat: no-repeat; 
+-webkit-transition: all 200ms linear;
+-moz-transition: all 200ms linear;
+-o-transition: all 200ms linear;
+transition: all 200ms linear;}
+
+#sublevel ul.level-1 > li.menu-item > a.menu-item{color:#ccc; display:block;font-size:12px;line-height:normal;text-decoration:none;margin:0;padding: 12px; }
+/*Parent list item hover and active*/
+#hormenu ul.level-0 > li.menu-item:hover > a.menu-item,
+#hormenu ul.level-0 > li.menu-item.active> a.menu-item{  margin: 0px;padding-top:10px;padding-bottom:10px; }
+
+#sublevel ul.level-1 > li.menu-item:hover > a.menu-item,
+#sublevel ul.level-1 > li.menu-item.active> a.menu-item {padding:11px 12px; margin:4px 0px;padding-top:4px;padding-bottom:4px; }
+
+#hormenu ul.level-0 > li.menu-item span.has-image,
+#sublevel ul.level-1 > li.menu-item span.has-image{padding-left:22px;display:block;background-repeat:no-repeat;background-position:0px 0px}
+#hormenu ul.level-0 > li.menu-item span.menu-title,
+#sublevel ul.level-1 > li.menu-item span.menu-title{display:block}
+
+#hormenu ul.level-0 > li.menu-item span.menu-desc,
+#sublevel ul.level-1 > li.menu-item span.menu-desc{display:block;font-size:11px; text-shadow: none; text-transform:lowercase;}
+
+
+#hormenu ul.level-0 > li.parent > a.menu-item span.menu,
+#sublevel ul.level-1 > li.parent > a.menu-item span.menu {display:block;background: none}
+
+#hormenu ul li.parent > a.menu-item span.menu,
+#sublevel ul li.parent > a.menu-item span.menu {display:block;background:url(../images/daddy.png) no-repeat 100% 50%}
+
+/*Submenu*/
+#hormenu li .submenu,#sublevel li .submenu {position: absolute;display:none;z-index:9999}
+#hormenu ul li .submenu-inner,#sublevel ul li .submenu-inner {background:#fff;color:#222}
+
+/*Styling subnav*/
+#hormenu ul ul,
+#sublevel ul ul {float: none;}
+
+#hormenu li.menu-item li.menu-item,
+#sublevel li.menu-item li.menu-item {background:none;display:block;margin:0;padding:0;float:none;border-top:1px solid #fff;border-bottom:1px solid #ddd}
+
+#hormenu li.menu-item li.menu-item:first-child,
+#sublevel li.menu-item li.menu-item:first-child{border-top:0}
+#hormenu li.menu-item li.menu-item:last-child,
+#sublevel li.menu-item li.menu-item:last-child{border-bottom:0}
+
+#hormenu li.menu-item li.menu-item a.menu-item,
+#sublevel li.menu-item li.menu-item a.menu-item
+{display:block;font-weight:200;line-height:normal;text-decoration:none;margin:0;padding:10px;color:#222;}
+
+#hormenu li.menu-item li:hover,#hormenu li.menu-item li.active,
+#sublevel li.menu-item li:hover,#sublevel li.menu-item li.active{background:#fafafa}
+
+#hormenu li.menu-item li.menu-item span.menu-desc,
+#sublevel li.menu-item li.menu-item span.menu-desc{color:#666}
+
+.select-menu {
+    color: transparent;
+    font-weight: normal;
+    margin: 0 0 10px;
+    padding: 6px; /* use this to set a specific height for your dropdown (DO NOT use the attribute 'height') */
+    border: 0 none !important;
+    cursor: pointer;
+    background: url('../images/arrow-m.png') no-repeat 99% 6px transparent; /* add your own arrow image */
+    -webkit-appearance: none; /* gets rid of default appearance in Webkit browsers*/
+    -moz-appearance: none; /* Get rid of default appearance for older Firefox browsers */
+    -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+    appearance: none;
+}
+.select-menu option {
+    color: #333;
+}

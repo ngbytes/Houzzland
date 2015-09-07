@@ -1,0 +1,93 @@
+
+
+.newsbox_item {
+	position:relative;
+	float:left;
+	text-align: center;
+	transition: all 0.4s ease-in-out; 
+	-webkit-transition: all 0.4s ease-in-out;
+}
+.newsbox_item:hover {
+	z-index:1000;
+	transform:translateY(-10px);
+	-o-transform:translateY(-10px);
+	-ms-transform:translateY(-10px);
+	-webkit-transform:translateY(-10px);
+}
+.newsbox_sett:hover {
+	box-shadow:0 10px 0 rgba(0,0,0,0.1);
+}
+.newsbox_item .newsbox_foto img {
+	transition: all 0.4s ease-in-out; 
+	-webkit-transition: all 0.4s ease-in-out;
+}
+.newsbox_item:hover .newsbox_foto img {opacity:0.9;
+	z-index:1000;
+	transform:translateY(-130px);
+	-o-transform:translateY(-130px);
+	-ms-transform:translateY(-130px);
+	-webkit-transform:translateY(-130px)}
+.newsbox_descr {
+	height:70px;
+	padding:20px 0 10px;
+	background-color:#fff;
+	transition: all 0.5s ease-in-out; 
+	-webkit-transition: all 0.5s ease-in-out;
+}
+.newsbox_item:hover .newsbox_descr {opacity:0.9;
+	transform:translateY(-130px);
+	-o-transform:translateY(-130px);
+	-ms-transform:translateY(-130px);
+	-webkit-transform:translateY(-130px);
+}
+.newsbox_name {
+	padding-bottom:8px;
+	text-transform:uppercase;
+	font-weight:900;
+	line-height:20px;
+	font-size:16px;
+}
+.newsbox_post {
+	padding-bottom:10px;
+	font-size:14px;
+	transition: all 0.4s ease-in-out; 
+	-webkit-transition: all 0.4s ease-in-out;
+}
+.newsbox_item:hover .newsbox_post {padding-bottom:10px;}
+.newsbox_sep {
+	width:80px;
+	height:3px;
+	margin:0 auto;
+	background-color:#cf4436;
+}
+.newsbox_about {
+	padding:10px 20px;
+	line-height:20px;
+	font-size:0;
+	opacity:0;
+	background:#fff;
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;	
+	transition-delay: 0.15s;
+	-webkit-transition-delay: 0.15s;
+}
+.newsbox_item:hover .newsbox_about {
+	font-size:13px;
+	opacity:1;
+}
+.newsbox_social a {
+	width:auto;
+	padding: 3px 10px;
+	color: #fff;
+	background-color:#cf4436;
+	font-size:13px;
+	opacity:0;
+	-moz-transition: all 0.4s ease 0s;
+}
+.newsbox_item:hover .newsbox_social a {opacity:1;}
+
+.newsbox_item:hover .newsbox_sep {opacity:0;}
+.newsbox_social a:hover { 
+	color:#cf4436;
+	background-color:#fafafa; }
+

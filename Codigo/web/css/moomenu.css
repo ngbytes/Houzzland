@@ -1,0 +1,12 @@
+.menutop,.menutop *{margin:0;padding:0;}
+#menu-mss{z-index:15;}
+#menu-mss li li{margin:0;}
+.menutop{line-height:1.0;float:left;margin-bottom:1.5em;position:relative;}
+.menutop ul{ background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0 0; padding:0; }
+.menutop li{float:left;list-style:none;position:relative;}
+#menu-mss li li a, #menu-mss li.active li a, #menu-mss li li .separator, #menu-mss li.active li .separator {display:block;padding:0;margin:0;text-decoration:none;float:none;height:28px;line-height: 30px;text-indent:8px;width:98%;}
+.menutop li ul{float:none;left:-999em;position:absolute;width:190px;z-index:5;}
+.menutop li:hover ul, .menutop li.sfHover ul{left:0;top:48px;}
+.menutop li:hover li ul, .menutop li.sfHover li ul, .menutop li li:hover li ul, .menutop li li.sfHover li ul, .menutop li li li:hover li ul, .menutop li li li.sfHover li ul{top:-999em;}
+.menutop li li:hover ul, .menutop li li.sfHover ul, .menutop li li li:hover ul, .menutop li li li.sfHover ul, .menutop li li li li:hover ul, .menutop li li li li.sfHover ul{left:190px;top:0;}
+.menutop li li{position:relative;float:none;width:100%;}

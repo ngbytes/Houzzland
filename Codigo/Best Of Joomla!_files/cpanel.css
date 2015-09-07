@@ -1,0 +1,17 @@
+/*---------------------------------------------------------------
+# Package - Sboost Framework  
+# ---------------------------------------------------------------
+# Author - olwebdesign http://www.olwebdesign.com
+# Copyright (C) 2008 - 2015 olwebdesign.com. All Rights Reserved. 
+# Websites: http://www.olwebdesign.com
+-----------------------------------------------------------------*/
+.mx-cpanel-wrap{position:relative;display:none;z-index:99999}
+#mx-cpanel{margin:0}
+#cpanel_container{width:100%;position:absolute;top:0;left:0;z-index:999}
+#cpanel-handler,.cpnl-left,.cpnl-right,.cpnl-mid{height:26px}
+#cpanel-handler{width:120px;display:block;cursor:pointer;position:absolute;left:50%;margin-left:-70px;bottom:-26px;text-align:center;color:#fff;font-size:12px;}
+.cpnl-left{background:url(images/tpnl_l.png) no-repeat 0 0}
+.cpnl-right{background:url(images/tpnl_r.png) no-repeat 100% 0;padding:0 16px}
+.cpnl-mid{background:url(images/tpnl_m.png) repeat-x 0 0}
+#mx-topcp{color:#bbb;background:url(images/bg.png) repeat 0 0;min-height:150px;}
+#mx-topcp a{color:#a5a5a5;}
