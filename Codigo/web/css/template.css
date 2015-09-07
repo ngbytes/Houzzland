@@ -11,7 +11,7 @@ a{text-decoration:none;}
 a:hover,a:active,a:focus{text-decoration:none;}
 .mx-base{margin-left:auto;margin-right:auto}
 .mx-block{float:left;display:inline}
-.mod-block {padding:10px}
+.mod-block {padding:0px}
 .mx-inner{padding-left:10px;padding-right:10px}
 .mx-block .first {margin-left:-10px}
 .mx-block .last {margin-right:-10px}
