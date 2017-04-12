@@ -42,9 +42,9 @@ pipeline {
         echo 'In the test build step.'
         //sh "./build/testCaller.sh test ${params.version_incr}"
         // From https://jenkins.io/doc/pipeline/steps/ssh-agent/
-        sshagent (credentials: ['GVT Robot']) {
-          sh 'git push --tags'
-        }
+       // sshagent (credentials: ['GVT Robot']) {
+       //   sh 'git push --tags'
+        //}
         // sh "serverless deploy --stage testing"
       }
     }
